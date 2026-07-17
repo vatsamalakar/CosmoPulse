@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore NASA's Astronomy Picture of the Day and Mars Rover photos." />
+    <title>CosmoPulse | Explore Space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#apod">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="CosmoPulse home">&#128640; CosmoPulse</a>
+      <nav aria-label="Main navigation">
+        <a href="#apod">Picture of the day</a>
+        <a href="#favorites">Favorites</a>
+        <a href="#assistant">Space assistant</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">NASA-powered exploration</p>
+        <h1 id="page-title">Discover something cosmic.</h1>
+        <p>View NASA's Astronomy Picture of the Day, browse Mars Rover photography, and save the discoveries you love.</p>
+      </section>
+
+      <section id="apod" class="section" aria-labelledby="apod-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Astronomy Picture of the Day</p>
+            <h2 id="apod-title">Today's view of the universe</h2>
+          </div>
+          <button id="favoriteBtn" type="button" disabled>Save favorite</button>
+        </div>
+        <div class="controls" aria-label="Choose an Astronomy Picture of the Day date">
+          <label for="datePicker">Choose a date</label>
+          <input type="date" id="datePicker" />
+          <button id="searchBtn" type="button">View picture</button>
+        </div>
+        <p id="status" class="status" aria-live="polite"></p>
+        <div id="app" aria-live="polite"><p class="loading">Loading today's NASA image&hellip;</p></div>
+      </section>
+
+      
+
+      <section id="favorites" class="section" aria-labelledby="favorites-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your collection</p>
+            <h2 id="favorites-title">Favorites</h2>
+          </div>
+        </div>
+        <div id="favoritesList" class="gallery" aria-live="polite"></div>
+      </section>
+
+      <section id="assistant" class="section chat-section" aria-labelledby="assistant-title">
+        <p class="eyebrow">Quick answers</p>
+        <h2 id="assistant-title">Space assistant</h2>
+        <p>Ask about Mars, the Moon, galaxies, black holes, and more.</p>
+        <div class="chat-controls">
+          <label class="sr-only" for="question">Ask a space question</label>
+          <input id="question" type="text" placeholder="For example: Why is Mars red?" autocomplete="off" />
+          <button id="askBtn" type="button">Ask</button>
+        </div>
+        <div id="answer" aria-live="polite"></div>
+      </section>
+    </main>
+    <footer>Built with NASA APIs for curious explorers.</footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
