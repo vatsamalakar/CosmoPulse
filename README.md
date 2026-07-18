@@ -1,20 +1,17 @@
-# 🚀 CosmoPulse
+# CosmoPulse
 
-CosmoPulse is a space exploration website built with **Vite**, **JavaScript**, **HTML**, and **CSS**. It uses NASA's public APIs to display real-time astronomy content and lets users explore space in an interactive way.
+I built CosmoPulse, a website that uses NASA's public APIs to display real-time astronomy content and lets users explore space in an fun way.
 
-## ✨ Features
+## Key Features
 
-* 🌌 NASA Astronomy Picture of the Day
-* 📅 Search APOD by date
-* ⭐ Save favorite images using LocalStorage
-* 🤖 Built-in Space Assistant
-* 📱 Responsive design for desktop and mobile
+* NASA Astronomy Picture of the Day
+* Search APOD by date
+* Save favorite images 
+* Built-in Space Assistant
 
-## 🛠️ Built With
-
+## I built it using
 * Vite
-* JavaScript (ES Modules)
+* JavaScript 
 * HTML5
-* CSS3
+* CSS
 * NASA APOD API
-* NASA Mars Rover Photos API
