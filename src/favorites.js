@@ -30,14 +30,14 @@ export function loadFavorites() {
     return;
   }
   favorites.forEach((item) => {
-    const card = document.createElement("article");
-    card.className = "favorite-card";
+    const favorite = document.createElement("article");
+    favorite.className = "favorite-item";
     if (item.media_type === "image" && item.url) {
       const image = document.createElement("img");
       image.src = item.url;
       image.alt = item.title || "Saved NASA image";
       image.loading = "lazy";
-      card.append(image);
+      favorite.append(image);
     }
     const title = document.createElement("h3");
     title.textContent = item.title || "Untitled";
@@ -49,8 +49,8 @@ export function loadFavorites() {
     remove.className = "secondary-button";
     remove.textContent = "Remove";
     remove.addEventListener("click", () => removeFavorite(item.date));
-    card.append(title, date, remove);
-    container.append(card);
+    favorite.append(title, date, remove);
+    container.append(favorite);
   });
 }
 

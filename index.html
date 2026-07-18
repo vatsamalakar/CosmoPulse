@@ -7,30 +7,26 @@
     <title>CosmoPulse | Explore Space</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <a class="skip-link" href="#apod">Skip to content</a>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="CosmoPulse home">&#128640; CosmoPulse</a>
+      <a class="brand" href="#apod" aria-label="CosmoPulse home">CosmoPulse</a>
       <nav aria-label="Main navigation">
-        <a href="#apod">Picture of the day</a>
-        <a href="#favorites">Favorites</a>
-        <a href="#assistant">Space assistant</a>
+        <a href="#apod" data-page-link="apod">Picture of the day</a>
+        <a href="#favorites" data-page-link="favorites">Favorites</a>
+        <a href="#assistant" data-page-link="assistant">Space assistant</a>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="page-title">
-        <h1 id="page-title">Discover something cosmic.</h1>
-        <p>View NASA's Astronomy Picture of the Day and for any other day and save the discoveries you love.</p>
-      </section>
-
-      <section id="apod" class="section" aria-labelledby="apod-title">
+    <main>
+      <section id="apod" class="page active-page" aria-labelledby="apod-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Astronomy Picture of the Day</p>
             <h2 id="apod-title">Today's view of the universe</h2>
+            <p class="page-intro">View NASA's Astronomy Picture of the Day, choose another date, and save the discoveries you love.</p>
           </div>
           <button id="favoriteBtn" type="button" disabled>Save favorite</button>
         </div>
@@ -45,20 +41,21 @@
 
       
 
-      <section id="favorites" class="section" aria-labelledby="favorites-title">
+      <section id="favorites" class="page" aria-labelledby="favorites-title" hidden>
         <div class="section-heading">
           <div>
             <p class="eyebrow">Your collection</p>
             <h2 id="favorites-title">Favorites</h2>
+            <p class="page-intro">Keep your favorite space images in one easy place.</p>
           </div>
         </div>
         <div id="favoritesList" class="gallery" aria-live="polite"></div>
       </section>
 
-      <section id="assistant" class="section chat-section" aria-labelledby="assistant-title">
+      <section id="assistant" class="page chat-section" aria-labelledby="assistant-title" hidden>
         <p class="eyebrow">Quick answers</p>
         <h2 id="assistant-title">Space assistant</h2>
-        <p>Ask about Mars, the Moon, galaxies, black holes, and more.</p>
+        <p class="page-intro">Ask about Mars, the Moon, galaxies, black holes, and more.</p>
         <div class="chat-controls">
           <label class="sr-only" for="question">Ask a space question</label>
           <input id="question" type="text" placeholder="For example: Why is Mars red?" autocomplete="off" />
